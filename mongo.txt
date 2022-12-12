@@ -1,0 +1,25 @@
+1,2) utilice lo que mandaste por el chat de la plataforma para ingresar
+los productos y mensajes
+
+3) db.productos.find(), db.mensajes.find()
+
+4) db.productos.estimatedDocumentCount(), db.mensajes.estimatedDocumentCount()
+
+5a) db.productos.insertOne({"nombre": "Pelota", "descripcion": "Pelota gigante", "codigo":888, "precio": 356})
+
+5b)1) db.productos.find({precio: {$lt: 1000}})
+
+2) db.productos.find({$and: [{precio: {$gt: 1000}}, {precio: {$lt:3000}}]})
+
+3) db.productos.find({precio: {$gt: 3000}})
+
+4) db.productos.find({}, {nombre: true}).sort({precio: 1}).skip(2).limit(1)
+
+5c) db.productos.updateMany({}, {$set: {"stock": 100}})
+
+5d) db.productos.updateMany({precio: {$gt: 4000}}
+
+5e) db.productos.deleteMany({precio: {$lt: 1000}})
+
+6) db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db:"test"}]}) // aclaracion: puse test
+porque no llame a mi base de datos como lo decia en la diapositiva.
